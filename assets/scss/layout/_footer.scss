@@ -1,89 +1,106 @@
 /* footer */
 .footer {
-  background-color: #aa0601;
+  background-color: $text-color;
   color: #fff;
   padding: 48px 0px 32px;
-}
-.footer-menu {
-  display: flex;
-  gap: 48px;
-  margin-bottom: 35px;
-}
-.footer-menu a {
-  padding: 16px 0;
-}
-.footer-wrap {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 33px;
-}
-.footer-social {
-  display: flex;
-  gap: 32px;
-}
-.footer-social a {
-  width: 48px;
-  height: 48px;
-}
-.footer-privacy {
-  border-top: 1px solid #fff;
-  display: flex;
-  justify-content: space-between;
-  padding-top: 32px;
-}
-.footer-privacy ul {
-  font-size: 14px;
-  display: flex;
-  gap: 48px;
-}
-.footer-tel span,
-.footer-mail span {
-  font-size: 36px;
-  margin-right: 22px;
-}
-.footer-tel,
-.footer-mail {
-  font-size: 36px;
-  display: flex;
-  align-items: center;
-}
-.footer-tel {
-  margin-bottom: 8px;
-}
-@media (max-width: 767px) {
-  .footer {
-      padding: 24px 0px;
+  @include sm{
+    padding: 24px 0px;
+
   }
-  .footer-wrap {
-      margin-bottom: 20px;
-  }
-  .footer-menu {
+  &-menu{
+    display: flex;
+    gap: 48px;
+    margin-bottom: 35px;
+    @include sm{
       display: none;
+    }
+    a{
+      padding: 16px 0;
+      &:hover{
+        font-weight: bold;
+      }
+    }
   }
-  .footer-tel span,
-  .footer-mail span {
-      font-size: 24px;
+  &-wrap{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 33px;
+    @include sm{
+      margin-bottom: 20px;
+    }
   }
-  .footer-tel,
-  .footer-mail {
-      font-size: 16px;
-  }
-  .footer-social {
+  &-social{
+    display: flex;
+    gap: 32px;
+    @include sm{
       gap: 8px;
+
+    }
+    a{
+      width: 48px;
+      height: 48px;
+      @include sm{
+        width: 24px;
+        height: 24px;
+      }
+    }
   }
-  .footer-social a {
-      width: 24px;
-      height: 24px;
-  }
-  .footer-privacy {
+  &-privacy{
+    border-top: 1px solid #fff;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 32px;
+    @include sm{
       flex-direction: column;
       padding-top: 20px;
+    }
+    ul{
+      font-size: 14px;
+      display: flex;
+      gap: 48px;
+      @include sm{
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+    p{
+      @include sm{
+        margin-bottom: 8px;
+      }
+    }
   }
-  .footer-privacy p {
-      margin-bottom: 8px;
+  &-tel{
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+  margin-bottom: 8px;
+    @include sm{
+      font-size: 16px;
+
+    }
+    span{
+      font-size: 36px;
+      margin-right: 22px;
+      @include sm{
+        font-size: 24px;
+
+      }
+    }
   }
-  .footer-privacy ul {
-      flex-direction: column;
-      gap: 8px;
+  &-mail{
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+    @include sm{
+      font-size: 16px;
+
+    }
+    span{
+      font-size: 36px;
+      margin-right: 22px;
+      @include sm{
+        font-size: 24px;
+      }
+    }
   }
 }

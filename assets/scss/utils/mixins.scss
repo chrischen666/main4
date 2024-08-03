@@ -1,0 +1,15 @@
+@mixin xs{
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+@mixin sm {
+    @media (max-width: 767px) {
+      @content;
+    }
+  }
+  @mixin md {
+    @media (max-width: 992px) {
+      @content;
+    }
+  }
