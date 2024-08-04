@@ -1,0 +1,65 @@
+.store {
+    margin-top: 96px;
+    margin-bottom: 80px;
+    color: #000;
+    @include xs {
+        margin-top: 40px;
+    }
+    h1 {
+        border-left: 8px solid #9f1213;
+        padding-left: 16px;
+        font-size: 48px;
+        font-weight: bold;
+        @include xs {
+            font-size: 24px;
+        }
+    }
+}
+.location {
+    align-items: center;
+    margin: 33px 0px 41px;
+    label {
+        font-size: 24px;
+        margin-right: 28px;
+        @include xs {
+            font-size: 16px;
+            margin-right: 8px;
+        }
+    }
+    select {
+        width: 304px;
+        font-size: 18px;
+        color: #495057;
+        opacity: 0.75;
+        border: 1px solid #ced4da;
+        padding: 6px 0px 6px 12px;
+        @include xs {
+            width: 276px;
+            font-size: 18px;
+        }
+    }
+}
+.card {
+    color: #212529;
+    li {
+        a {
+            width: 100%;
+            border: 1px solid #00000020;
+        }
+    }
+    h2 {
+        border-bottom: 1px solid #00000020;
+        padding: 8px 24px;
+        font-size: 24px;
+    }
+}
+.card-list {
+    padding: 16px 24px;
+    font-size: 20px;
+}
+.card-details {
+    padding: 16px 0px;
+    background-color: #000;
+    width: 100%;
+    color: #fff;
+}

@@ -1,0 +1,30 @@
+.inside-card {
+    img {
+        object-fit: cover;
+        object-position: center;
+        @include xs {
+            height: 224px;
+        }
+    }
+
+    li {
+        &:first-child {
+            @include md {
+                display: flex;
+                margin-bottom: 24px;
+                gap: 24px;
+            }
+            @include xs {
+                flex-direction: column;
+            }
+        }
+        &:nth-child(2) {
+            img {
+                height: 100%;
+            }
+        }
+    }
+}
+.card-content {
+    border: 1px solid #00000020;
+}
