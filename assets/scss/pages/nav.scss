@@ -1,0 +1,26 @@
+.nav {
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include sm{
+        display: none;
+    }
+    & > a {
+        span {
+            font-size: 30px;
+        }
+    }
+    ul {
+        display: flex;
+        gap: 48px;
+        align-items: start;
+        justify-content: flex-end;
+        li {
+            a {
+                padding: 13px 0px;
+                font-size: 20px;
+            }
+        }
+    }
+}

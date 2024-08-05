@@ -1,8 +1,63 @@
-.nav{
-    display: flex;
-    justify-content: space-between;
-    ul{
+
+.blog {
+    &-main {
+        img {
+            object-fit: cover;
+        }
+        h1 {
+            font-size: 48px;
+            color: #000;
+            border-left: 8px solid #9f1213;
+            padding-left: 16px;
+            margin-top: 96px;
+            margin-bottom: 32px;
+        }
+    }
+    &-card {
         display: flex;
-        gap: 48px;
+        flex-direction: column;
+        h2 {
+            font-size: 32px;
+            color: #650300;
+            @include md {
+                font-size: 24px;
+            }
+        }
+        div {
+            color: #000;
+            margin-bottom: 16px;
+        }
+        & > p {
+            font-size: 20px;
+            color: #555555;
+            @include md {
+                font-size: 16px;
+            }
+            @include xs{
+                display: none;
+            }
+            &::after {
+                @include md {
+                    content: "more";
+                }
+            }
+        }
+    }
+    &-more {
+        font-size: 36px;
+        color: #650300;
+        font-weight: 900;
+        margin-top: auto;
+        text-align: right;
+        @include md {
+            display: none;
+        }
+    }
+    &-content{
+        margin-bottom: 135px;
+        row-gap: 60px;
+        @include md{
+            row-gap: 24px;
+        }
     }
 }
