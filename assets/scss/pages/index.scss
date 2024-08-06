@@ -1,253 +1,257 @@
 .banner {
-  background-image: url("../images/home-header.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 787px;
-}
-.banner-main {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;
-  height: 100%;
-}
-.banner-main p {
-  font-size: 36px;
-}
-.banner-main h1 {
-  font-size: 64px;
-  font-weight: bold;
-}
-.banner-btn {
-  font-size: 20px;
-  color: #fff;
-  padding: 6px 12px;
-  background-color: $text-color;
-}
-.banner-btn:hover {
-  background: $primary;
-}
-@media (max-width: 972px) {
-  .banner {
-      background-image: url("../images/home-header-sm.png");
-  }
+    background-image: url("../images/home-header.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 787px;
+    &-main {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        height: 100%;
+        p {
+            font-size: 36px;
+        }
+        h1 {
+            font-size: 64px;
+            font-weight: bold;
+        }
+    }
+    &-btn {
+        font-size: 20px;
+        color: #fff;
+        padding: 6px 12px;
+        background-color: $text-color;
+        &:hover {
+            background: $primary;
+        }
+    }
+    @include md {
+        background-image: url("../images/home-header-sm.png");
+    }
+    @include xs {
+        height: 396px;
+        &-main {
+            p {
+                font-size: 16px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+        }
+        &-btn {
+            font-size: 20px;
+        }
+    }
 }
 
-@media (max-width: 576px) {
-  .banner {
-      height: 396px;
-  }
-  .banner-main p {
-      font-size: 16px;
-  }
-  .banner-main h1 {
-      font-size: 24px;
-  }
-  .banner-btn {
-      font-size: 20px;
-  }
-}
 /* 專業 */
 .main {
-  background-color: #fbf2f2;
-  padding: 80px 0;
-  margin-bottom: 80px;
+    background-color: #fbf2f2;
+    padding: 80px 0;
+    margin-bottom: 80px;
+    h2 {
+        font-size: 48px;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+    img {
+        width: 83px;
+        height: 83px;
+    }
+    &-card {
+        img {
+            margin-bottom: 16px;
+        }
+        h3 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+    }
+    @include xs {
+        h2 {
+            font-size: 24px;
+        }
+    }
 }
-.main h2 {
-  font-size: 48px;
-  text-align: center;
-  font-weight: bold;
-  margin-bottom: 30px;
-}
-.main img {
-  width: 83px;
-  height: 83px;
-}
-.main-card img {
-  margin-bottom: 16px;
-}
-.main-card h3 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 16px;
-}
-@media (max-width: 576px) {
-  .main h2 {
-      font-size: 24px;
-  }
-}
+
 /* 經典 */
-.classic-content {
-  margin-bottom: 80px;
+.classic {
+    &-content {
+        margin-bottom: 80px;
+        img {
+            margin-bottom: 8px;
+        }
+        h3 {
+            font-size: 48px;
+            font-weight: 900;
+            text-align: center;
+            color: $text-color;
+            font-style: italic;
+        }
+    }
+    &-title {
+        font-size: 48px;
+        margin-bottom: 48px;
+        font-size: 48px;
+        font-weight: bold;
+    }
+    @include md {
+        &-content {
+            gap: 24px;
+        }
+    }
 }
-.classic-title {
-  font-size: 48px;
-  margin-bottom: 48px;
-  font-size: 48px;
-  font-weight: bold;
-}
-.classic-content img {
-  margin-bottom: 8px;
-}
-.classic-content h3 {
-  font-size: 48px;
-  font-weight: 900;
-  text-align: center;
-  color: $text-color;
-  font-style: italic;
-}
-@media (max-width: 992px) {
-  .classic-content {
-      gap: 24px;
-  }
-}
+
 /* 設計 */
 .design {
-  background-image: url("../assets/images/index-bg.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  /* height: 608px; */
-  padding: 80px 0px;
-  margin-bottom: 80px;
+    background-image: url("../assets/images/index-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* height: 608px; */
+    padding: 80px 0px;
+    margin-bottom: 80px;
+    &-title {
+        color: #fff;
+        font-size: 48px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 48px;
+    }
+    &-content {
+        margin: 0;
+
+        h3 {
+            background-color: #fff;
+            font-size: 48px;
+            color: $text-color;
+            text-align: center;
+            font-style: italic;
+            font-weight: 900;
+            padding: 8px 0;
+        }
+        ul {
+            padding: 0;
+        }
+    }
+    @include md {
+        background-image: url("../assets/images/index-bg-md.png");
+        &-content {
+            gap: 24px;
+        }
+    }
+    @include xs {
+        background-image: url("../assets/images/index-bg-sm.png");
+    }
 }
-.design-title {
-  color: #fff;
-  font-size: 48px;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 48px;
-}
-.design-content h3 {
-  background-color: #fff;
-  font-size: 48px;
-  color: $text-color;
-  text-align: center;
-  font-style: italic;
-  font-weight: 900;
-  padding: 8px 0;
-}
-.design-content {
-  margin: 0;
-}
-.design-content li {
-  padding: 0;
-}
-@media (max-width: 992px) {
-  .design {
-      background-image: url("../assets/images/index-bg-md.png");
-  }
-  .design-content {
-      gap: 24px;
-  }
-}
-@media (max-width: 576px) {
-  .design {
-      background-image: url("../assets/images/index-bg-sm.png");
-  }
-}
+
 /* 顧客推薦 */
 .recommends {
-  padding: 80px 0;
+    padding: 80px 0;
+    &-title {
+        font-size: 48px;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 48px;
+    }
+    &-item {
+        border: 1px solid #dee2e6;
+        border-radius: 4px;
+        color: #000;
+    }
+    &-content {
+        row-gap: 24px;
+    }
+    &-comments {
+        box-shadow: 0px 2px 6px #00000029;
+        padding: 16px;
+        min-height: 205px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        /* 細節 */
+        h4 {
+            margin-bottom: 8px;
+        }
+        time {
+            font-size: 14px;
+            color: #707070;
+            margin-top: auto;
+        }
+    }
 }
-.recommends-title {
-  font-size: 48px;
-  text-align: center;
-  font-weight: bold;
-  margin-bottom: 48px;
-}
-.recommends-item {
-  border: 1px solid #dee2e6;
-  border-radius: 4px;
-  color: #000;
-}
-.recommends-content {
-  row-gap: 24px;
-}
-.recommends-comments {
-  box-shadow: 0px 2px 6px #00000029;
-  padding: 16px;
-  min-height: 205px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  /* 細節 */
-}
-.recommends-comments h4 {
-  margin-bottom: 8px;
-}
-.recommends-comments time {
-  font-size: 14px;
-  color: #707070;
-  margin-top: auto;
-}
+
 /* 聯繫 */
 
 .contact {
-  padding: 80px 0px;
-  background-color: #fbf2f2;
+    padding: 80px 0px;
+    background-color: #fbf2f2;
+    &-title {
+        text-align: center;
+        font-size: 48px;
+        font-weight: bold;
+        margin-bottom: 48px;
+    }
+    &-content {
+        color: #000;
+        margin: 0 auto;
+        width: 636px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 48px;
+        p {
+            font-size: 20px;
+            margin-bottom: 24px;
+        }
+        label {
+            margin-bottom: 8px;
+        }
+        input,
+        textarea {
+            background-color: transparent;
+            border: 1px solid #000;
+        }
+        input,
+        .opinion {
+            margin-bottom: 16px;
+            padding: 6px 12px;
+        }
+        button {
+            border: 0;
+        }
+    }
+    &-submit {
+        display: block;
+        margin: 48px auto 0;
+        background-color: $text-color;
+        padding: 16px 176px;
+        color: #fff;
+        cursor: pointer;
+        &:hover {
+            background: $primary;
+        }
+    }
+    @include md {
+        &-content {
+            width: 576px;
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+    @include sm {
+        &-content {
+            width: 348px;
+        }
+        &-title {
+            font-size: 24px;
+        }
+        &-submit {
+            padding: 16px 142px;
+        }
+    }
 }
-.contact-title {
-  text-align: center;
-  font-size: 48px;
-  font-weight: bold;
-  margin-bottom: 48px;
-}
-.contact-content {
-  color: #000;
-  margin: 0 auto;
-  width: 636px;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 48px;
-}
-.contact-content p {
-  font-size: 20px;
-  margin-bottom: 24px;
-}
-.contact-content label {
-  margin-bottom: 8px;
-}
-.contact-content input,
-.contact-content textarea {
-  background-color: transparent;
-  border: 1px solid #000;
-}
-.contact-content input,
-.opinion {
-  margin-bottom: 16px;
-  padding: 6px 12px;
-}
-.contact-submit {
-  display: block;
-  margin: 48px auto 0;
-  background-color: $text-color;
-  padding: 16px 176px;
-  color: #fff;
-  cursor: pointer;
-}
-.contact-submit:hover {
-  background: $primary;
-}
-.contact-content button {
-  border: 0;
-}
-@media (max-width: 992px) {
-  .contact-content {
-      width: 576px;
-  }
-  .contact-content p {
-      font-size: 16px;
-  }
-}
-@media (max-width: 767px) {
-  .contact-content {
-      width: 348px;
-  }
-  .contact-title {
-      font-size: 24px;
-  }
-  .contact-submit {
-      padding: 16px 142px;
-  }
-}
+
 /* component元件 */

@@ -18,7 +18,7 @@
         flex-direction: column;
         h2 {
             font-size: 32px;
-            color: #650300;
+            color: $primary;
             @include md {
                 font-size: 24px;
             }
@@ -45,7 +45,7 @@
     }
     &-more {
         font-size: 36px;
-        color: #650300;
+        color: $text-color;
         font-weight: 900;
         margin-top: auto;
         text-align: right;
