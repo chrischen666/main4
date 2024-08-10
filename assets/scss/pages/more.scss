@@ -1,9 +1,6 @@
 .more {
     display: flex;
-    margin-top: 24px;
-    margin-bottom: 80px;
     gap: 24px;
-
     p {
         color: #000;
     }
@@ -27,7 +24,7 @@
     h1 {
         font-size: 48px;
         color: #000;
-        @include xs{
+        @include xs {
             font-size: 24px;
         }
     }
@@ -35,7 +32,7 @@
         color: #000;
         font-size: 24px;
         margin-bottom: 24px;
-        @include xs{
+        @include xs {
             font-size: 16px;
         }
     }
@@ -46,40 +43,6 @@
         p {
             margin-bottom: 40px;
             color: #555555;
-        }
-    }
-    &-share {
-        display: flex;
-        gap: 16px;
-        align-items: center;
-        margin-top: 40px;
-        margin-bottom: 10px;
-        padding-bottom: 10px;
-        border-bottom: 2px solid gray;
-        font-weight: bold;
-        color: #000;
-        @include xs{
-            display: none;
-        }
-        img {
-            width: 24px;
-            height: 24px;
-        }
-    }
-    &-arrow {
-        color: #000;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        @include xs{
-            display: none;
-        }
-        span {
-            font-size: 16px;
-        }
-        a {
-            display: flex;
-            align-items: center;
         }
     }
     &-tags {
@@ -119,6 +82,25 @@
             @include md {
                 font-size: 16px;
             }
+        }
+    }
+    &-breadcrumb {
+        a {
+            &:hover {
+                cursor: pointer;
+                color: $text-color;
+            }
+        }
+    }
+    &-cover{
+        display: none;
+        @include md{
+            display: block  ;
+        }
+    }
+    &-none{
+        @include md{
+            display: none;
         }
     }
 }

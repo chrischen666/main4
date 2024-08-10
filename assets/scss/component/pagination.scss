@@ -1,0 +1,17 @@
+.more-pagination {
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include xs {
+        display: none;
+    }
+    a {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .material-symbols-outlined {
+        font-size: 24px;
+    }
+}

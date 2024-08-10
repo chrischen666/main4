@@ -1,19 +1,19 @@
 // utils 內輔助管理 or 產生樣式的檔案
-
 @import "./utils/variables.scss";
 @import "./utils/mixins.scss";
-
+@import "./utils/helper.scss";
 // base
 @import "./base/reset.scss";
 @import "./base/base.scss";
 // layout
-
 @import "./layout/header.scss";
 @import "./layout/footer.scss";
 @import "./layout/location.scss";
 @import "./layout/nav.scss";
 // component
 @import "./component/switch.scss";
+@import "./component/share.scss";
+@import "./component/pagination.scss";
 // pages
 @import "./pages/index.scss";
 @import "./pages/optical.scss";
