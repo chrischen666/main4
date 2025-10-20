@@ -30,6 +30,7 @@
         background-image: url("../images/home-header-sm.png");
     }
     @include xs {
+
         height: 396px;
         &-main {
             p {
@@ -107,7 +108,7 @@
 
 /* 設計 */
 .design {
-    background-image: url("../assets/images/index-bg.png");
+    background-image: url("../images/index-bg.png");
     background-size: cover;
     background-repeat: no-repeat;
     /* height: 608px; */
@@ -137,13 +138,13 @@
         }
     }
     @include md {
-        background-image: url("../assets/images/index-bg-md.png");
+        background-image: url("../images/index-bg-md.png");
         &-content {
             gap: 24px;
         }
     }
     @include xs {
-        background-image: url("../assets/images/index-bg-sm.png");
+        background-image: url("../images/index-bg-sm.png");
     }
 }
 
